@@ -1,0 +1,31 @@
+course_id,course_name,status,date_finished,date_started
+D370,IT Leadership Foundations,Completed,2024-08-21,2024-08-01
+D491,Intoduction to Analytics,Completed,2024-10-06,2024-08-21
+D278,Scripting and Programming - Foundations,Completed,2024-11-13,2024-10-06
+D388,Fundamentals of Spreadsheets and Data Presentations,Completed,2025-11-20,2025-10-16
+D426,Data Management - Foundations,Completed,2025-01-23,2024-11-13
+C721,Change Management,Completed,2025-02-07,2025-02-01
+D427,Data Management - Applications,Completed,2025-03-11,2025-02-07
+D326,Advanced Data Management,Completed,2025-04-15,2025-03-11
+D315,Network and Security - Foundations,Completed,2025-06-07,2025-04-15
+D335,Introduction to Programming in Python,Completed,2025-07-28,2025-06-07
+D197,Version Control,Completed,2025-09-02,2025-08-01
+D428,Design Thinking for Business,Completed,2025-10-10,2025-09-02
+D276,Web Development Foundations,Completed,2025-10-16,2025-10-10
+D282,Cloud Foundations,Completed,2025-12-14,2025-11-20
+D386,Hardware and Operating Systems Essentials,Completed,2026-01-13,2026-02-01
+D494,Data and Information Governance,Completed,2026-01-24,2026-01-13
+D492,Data Analytics - Applications,Completed,2026-02-25,2026-01-24
+D493,Scripting and Programming - Applications,Completed,2026-03-24,2026-02-25
+D324,Business of IT - Project Management,In Progress,,
+D495,Big Data Foundations,In Progress,,
+D246,Influential Communication through Visual Design and Storytelling,Not Started,,
+C949,Data Structures and Algorithms I,Not Started,,
+D496,Introduction to Data Science,Not Started,,
+D497,Data Wrangling,Not Started,,
+D498,Data Analysis with R,Not Started,,
+D499,Machine Learning,Not Started,,
+D500,Data Visualization,Not Started,,
+D501,Machine Learning DevOps,Not Started,,
+D372,Introduction to Systems Thinking,Not Started,,
+D502,Data Analytics Capstone,Not Started,,
