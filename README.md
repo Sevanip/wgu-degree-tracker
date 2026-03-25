@@ -10,6 +10,7 @@ This tool was developed to move beyond a simple spreadsheet and create a robust 
 * **Libraries:** `csv`, `datetime`, `os`
 
 ## Key Features
+* **Predictive Graduation Modeling:** Uses historical velocity data (Avg Days per Course) to forecast a specific graduation month and year.
 * **Database Migrations:** Automated schema updates to add new tracking columns without losing data.
 * **Performance Analytics:** Calculates average days to complete a course to estimate a graduation date.
 * **Smart Backfill:** Uses logic-based imputation to fill missing `date_started` values based on WGU term starts (Aug 1st / Feb 1st).
@@ -40,4 +41,5 @@ $$\text{Avg Pace} = \frac{\sum (\text{Date Finished} - \text{Date Started})}{\te
 1. Run the script: `main.py`
 2. Select **Option 4** (Run Backfill) to align historical data.
 3. Use **Option 2** to update current course status.
-4. Export your data to CSV using **Option 5** for external reporting.
+4. Select **Option 3** to see current completion percentage and your AI-projected graduation date.
+5. Export your data to CSV using **Option 5** for external reporting.

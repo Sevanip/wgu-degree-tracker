@@ -1,6 +1,6 @@
 import csv
 import sqlite3
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 
 def create_and_populate_db():
@@ -206,3 +206,25 @@ def export_to_csv():
     conn.close()
     print(f"\nSuccess! Data exported to {file_name}")
 
+def predict_graduation_date():
+    conn = sqlite3.connect('wgu_degree.db')
+    cursor = conn.cursor()
+
+    #get current velocity
+    avg_days = calculate_velocity() #Using my existing function
+
+    #Get count of remaining courses
+    cursor.execute("SELECT COUNT(*) FROM degree_progress WHERE status != 'Completed'")
+    remaining_count = cursor.fetchone()[0]
+    conn.close()
+
+    if avg_days == 0:
+        return "Not enough data to predict yet. Complete more Courses!"
+    
+    #Calculate total estimate days
+    total_days_left = remaining_count * avg_days
+
+    #project the date from today
+    predicted_date = date.today() + timedelta(days=int(total_days_left))
+
+    return predicted_date, remaining_count, total_days_left
