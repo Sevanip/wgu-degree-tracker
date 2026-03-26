@@ -1,6 +1,7 @@
 import csv
 import sqlite3
 from datetime import date, datetime, timedelta
+import matplotlib.pyplot as plt
 
 
 def create_and_populate_db():
@@ -228,3 +229,36 @@ def predict_graduation_date():
     predicted_date = date.today() + timedelta(days=int(total_days_left))
 
     return predicted_date, remaining_count, total_days_left
+
+def show_progress_chart():
+    conn = sqlite3.connect('wgu_degree.db')
+    cursor = conn.cursor()
+
+    #Count courses by status
+    cursor.execute("SELECT status, COUNT(*) FROM degree_progress GROUP BY status")
+    data = cursor.fetchall()
+    conn.close()
+
+    if not data:
+        print("No data to graph!")
+        return
+    
+    #prepare data for chart
+    statuses = [row[0] for row in data]
+    counts = [row[1] for row in data]
+    colors = ['#2ecc71','#f1c40f', '#e74c3c' ] #Green, Yellow, Red
+
+    #create the plot
+    plt.figure(figsize=(8, 6))
+    plt.bar(statuses, counts, color=colors[:len(statuses)])
+
+    plt.title('WGU Degree Progress Chart')
+    plt.xlabel('Course Status')
+    plt.ylabel('Number of Courses')
+
+    #Add a "Goal" line for total courses
+    plt.axhline(y=30, color='gray', linestyle='--', label='Total Courses (30)')
+    plt.legend()
+
+    print("Opening chart... close window to return to the menu")
+    plt.show()

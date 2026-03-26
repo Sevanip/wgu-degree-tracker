@@ -24,6 +24,10 @@ def main_menu():
                 print(f"Estimated Days Remaining: {int(days_left)} days")
                 print(f"Projected Graduation Date: {prediction.strftime('%B %Y')}")
                 print(f"Based on your current speed, you're finishing in {prediction.year}!")
+                
+                #NEW: Adding visual
+                print("\nGenerating Progress Chart...")
+                dt.show_progress_chart()
             else:
                 print("Run backfill (option 4) to see pace analytics")
         elif choice == '4':
@@ -33,7 +37,6 @@ def main_menu():
         elif choice == '6':
             break
         
-
 if __name__ == "__main__":
     #No longer need to create and populate database.
     #migrate_database()

@@ -35,11 +35,13 @@ $$\text{Avg Pace} = \frac{\sum (\text{Date Finished} - \text{Date Started})}{\te
 
 ## Roadmap
 * **Predictive Graduation Modeling:** Use current velocity (30.1 days) to forecast a specific graduation month.
-* **Data Visualization:** Integration with Matplotlib to generate a "Burndown Chart" of remaining credits.
+* **Data Visualization:** Integration with Matplotlib to generate a "Bar Chart" of degree progress.
+![Progress Chart](progress_chart.png)
 
 ## How to Use
-1. Run the script: `main.py`
-2. Select **Option 4** (Run Backfill) to align historical data.
-3. Use **Option 2** to update current course status.
-4. Select **Option 3** to see current completion percentage and your AI-projected graduation date.
-5. Export your data to CSV using **Option 5** for external reporting.
+1. Install dependencies: 'pip install -r requirements.txt'
+2. Run the script: `main.py`
+3. Select **Option 4** (Run Backfill) to align historical data.
+4. Use **Option 2** to update current course status.
+5. Select **Option 3** to see current completion percentage and your AI-projected graduation date.
+6. Export your data to CSV using **Option 5** for external reporting.
