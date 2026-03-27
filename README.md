@@ -4,6 +4,11 @@ A Python-based CLI application designed to track academic progress, manage cours
 ## Project Overview
 This tool was developed to move beyond a simple spreadsheet and create a robust data pipeline for tracking degree progress. It features a custom **Data Backfill** algorithm that handles missing historical data by applying academic term logic to calculate completion velocity.
 
+## Project Origin
+This project was originally conceived as a technical "warm-up" to master Python fucntions, relational database design, and ETL logic prior to beginning my WGU Weather Prediction Project.
+
+By building this tracker first, i was able to develop a robust codebase that eventually served a the architectural foundation for my more complex weather forecasting models.
+
 ## Tech Stack
 * **Language:** Python 3.x
 * **Database:** SQLite3
@@ -37,6 +42,8 @@ $$\text{Avg Pace} = \frac{\sum (\text{Date Finished} - \text{Date Started})}{\te
 * **Predictive Graduation Modeling:** Use current velocity (30.1 days) to forecast a specific graduation month.
 * **Data Visualization:** Integration with Matplotlib to generate a "Bar Chart" of degree progress.
 ![Progress Chart](progress_chart.png)
+* **Big Data Integration:** Exploring how to migrate local SQLite storage to a distributed cloud environment (AWS/Azure) as part my Big Data Foundations coursework.
+* **Velocity Scaling:** Applying Big Data principles to analyze 'Student Velocity' across entire WGU cohorts using MapReduce logic. 
 
 ## How to Use
 1. Install dependencies: 'pip install -r requirements.txt'
